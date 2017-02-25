@@ -1,7 +1,13 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import { storiesOf, action, addDecorator } from '@kadira/storybook';
 import Button from './Button';
-import RoomCard from '../components/RoomCard'
+import RoomCard from '../components/RoomCard';
+import ThemeProvider from '../containers/ThemeProvider';
+import init from '../init';
+
+addDecorator(story => (
+  <ThemeProvider>{story()}</ThemeProvider>
+));
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -12,9 +18,11 @@ storiesOf('Button', module)
   ));
 
 storiesOf('RoomCard', module)
-  .add('with no text', () =>(
+  .add('with no text', () => (
     <RoomCard onClick={action('clicked')} />
   ))
-  .add('with text', () =>(
-    <RoomCard text='I like Turtles.' />
-  ))
+  .add('with text', () => (
+    <RoomCard text="I like Turtles." />
+  ));
+
+init();

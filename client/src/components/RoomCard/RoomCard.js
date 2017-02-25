@@ -1,7 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react';
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 
-export default (props) => (
-  <div>
-    <h1>{props.text || 'Hello World'}</h1>
-  </div>
-)
+
+export default props => (
+  <Card>
+    <CardHeader title={props.text || 'Hello World'} />
+  </Card>
+);
