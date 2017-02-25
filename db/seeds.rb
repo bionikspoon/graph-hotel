@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+3.times do |floor|
+  9.times do |room|
+    Room.create name: "#{floor + 1}0#{room + 1}", status: 'vacant'
+  end
+end
