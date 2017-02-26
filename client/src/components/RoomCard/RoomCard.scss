@@ -1,0 +1,13 @@
+:local {
+  .header::before {
+      content: '◉';
+      padding-right: .5em;
+  }
+  .occupied::before  {
+    color: #4CAF50;
+  }
+
+  .vacant::before  {
+    color: #F44336;
+  }
+}

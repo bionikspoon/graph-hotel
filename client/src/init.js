@@ -8,7 +8,7 @@ export default () => {
 
   WebFont.load({
     google: {
-      families: ['Roboto'],
+      families: ['Roboto', 'Material Icons'],
     },
   })
 }
