@@ -8,6 +8,14 @@
 
 3.times do |floor|
   9.times do |room|
-    Room.create name: "#{floor + 1}0#{room + 1}", status: 'vacant'
+    beds = rand(1..3)
+    Room.create \
+      name: "#{floor + 1}0#{room + 1}",
+      floor: floor + 1,
+      occupied: [true, false].sample,
+      smoking: [true, false].sample,
+      pets: [true, false].sample,
+      beds: beds,
+      max_occupancy: beds * 2 + 1
   end
 end

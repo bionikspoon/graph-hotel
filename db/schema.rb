@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225170646) do
+ActiveRecord::Schema.define(version: 20170226033617) do
 
   create_table "rooms", force: :cascade do |t|
+    t.integer  "floor"
     t.string   "name"
-    t.string   "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "occupied"
+    t.boolean  "smoking"
+    t.boolean  "pets"
+    t.integer  "beds"
+    t.integer  "max_occupancy"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
