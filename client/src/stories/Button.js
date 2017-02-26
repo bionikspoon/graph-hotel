@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { identity } from 'ramda'
 
 const buttonStyles = {
   border: '1px solid #eee',
@@ -8,7 +9,7 @@ const buttonStyles = {
   fontSize: 15,
   padding: '3px 10px',
   margin: 10,
-};
+}
 
 const Button = ({ children, onClick }) => (
   <button
@@ -17,11 +18,14 @@ const Button = ({ children, onClick }) => (
   >
     {children}
   </button>
-);
+)
 
 Button.propTypes = {
   children: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func,
-};
+}
+Button.defaultProps = {
+  onClick: identity,
+}
 
-export default Button;
+export default Button

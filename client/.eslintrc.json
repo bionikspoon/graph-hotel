@@ -6,6 +6,8 @@
     "import"
   ],
   "rules": {
+    "semi": [1, "never"],
+    "arrow-parens": [1, "always"],
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
   }
 }

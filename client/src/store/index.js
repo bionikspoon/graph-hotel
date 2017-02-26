@@ -1,9 +1,9 @@
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from '../reducers';
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from '../reducers'
 
 
-const composeEnhancers = composeWithDevTools({ });
+const composeEnhancers = composeWithDevTools({ })
 
 export default (initialState) => {
   const store = createStore(
@@ -12,13 +12,13 @@ export default (initialState) => {
     composeEnhancers(
       applyMiddleware(),
     ),
-);
+)
 
   if (module.hot) {
     module.hot.accept('../reducers', () =>
       store.replaceReducer(require('../reducers')),
-    );
+    )
   }
 
-  return store;
-};
+  return store
+}
