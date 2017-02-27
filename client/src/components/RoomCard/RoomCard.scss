@@ -4,10 +4,10 @@
       padding-right: .5em;
   }
   .occupied::before  {
-    color: #4CAF50;
+    color: #F44336;
   }
 
   .vacant::before  {
-    color: #F44336;
+    color: #4CAF50;
   }
 }

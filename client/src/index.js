@@ -7,6 +7,8 @@ import './index.css'
 import configureStore from './store'
 import init from './init'
 
+init()
+
 ReactDOM.render(
   <Provider store={configureStore()}>
     <ThemeProvider>
@@ -15,5 +17,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 )
-
-init()

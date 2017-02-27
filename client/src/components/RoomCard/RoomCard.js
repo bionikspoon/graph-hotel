@@ -67,17 +67,23 @@ BedsDetails.propTypes = {
 }
 
 const RoomCard = (props) => (
-  <Card expanded={props.expanded} onExpandChange={debounce(0, props.onExpandChange)}>
-    <CardHeader actAsExpander showExpandableButton title={<HeaderTitle name={props.name} />} />
+  <Card
+    expandable
+    style={props.style}
+    className={props.className}
+    expanded={props.expanded}
+    onExpandChange={debounce(0, props.onExpandChange)}
+  >
+    <CardHeader actAsExpander showExpandableButton title={<HeaderTitle {...props} />} />
     <CardText>
       <Toggle
         toggled={props.occupied}
-        onToggle={props.onToggleOccupied}
+        onToggle={props.onSetOccupied}
         labelPosition="right"
         label="Occupied"
       />
     </CardText>
-    <CardText expandable style={{ fontSize: '2rem', lineHeight: '3rem' }}>
+    <CardText expandable style={{ fontSize: '1.5rem', lineHeight: '2.5rem' }}>
       <SmokingDetails smoking={props.smoking} />
       <FloorDetails floor={props.floor} />
       <PetsDetails pets={props.pets} />
@@ -89,11 +95,16 @@ RoomCard.propTypes = {
   beds: PropTypes.number.isRequired,
   expanded: PropTypes.bool.isRequired,
   floor: PropTypes.number.isRequired,
-  name: PropTypes.node.isRequired,
   occupied: PropTypes.bool.isRequired,
   onExpandChange: PropTypes.func.isRequired,
-  onToggleOccupied: PropTypes.func.isRequired,
+  onSetOccupied: PropTypes.func.isRequired,
   pets: PropTypes.bool.isRequired,
   smoking: PropTypes.bool.isRequired,
+  style: PropTypes.object,
+  className: PropTypes.string,
+}
+RoomCard.defaultProps = {
+  style: {},
+  className: '',
 }
 export default RoomCard

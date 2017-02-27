@@ -1,0 +1,133 @@
+[{
+  "id": 1,
+  "floor": 1,
+  "name": "101",
+  "occupied": false,
+  "smoking": true,
+  "pets": false,
+  "beds": 3,
+  "max_occupancy": 7,
+  "created_at": "2017-02-26T03:46:59.401Z",
+  "updated_at": "2017-02-26T03:46:59.401Z"
+}, {
+  "id": 2,
+  "floor": 1,
+  "name": "102",
+  "occupied": false,
+  "smoking": true,
+  "pets": true,
+  "beds": 1,
+  "max_occupancy": 3,
+  "created_at": "2017-02-26T03:46:59.404Z",
+  "updated_at": "2017-02-26T03:46:59.404Z"
+}, {
+  "id": 3,
+  "floor": 1,
+  "name": "103",
+  "occupied": false,
+  "smoking": false,
+  "pets": false,
+  "beds": 2,
+  "max_occupancy": 5,
+  "created_at": "2017-02-26T03:46:59.409Z",
+  "updated_at": "2017-02-26T03:46:59.409Z"
+}, {
+  "id": 4,
+  "floor": 1,
+  "name": "104",
+  "occupied": true,
+  "smoking": true,
+  "pets": false,
+  "beds": 1,
+  "max_occupancy": 3,
+  "created_at": "2017-02-26T03:46:59.412Z",
+  "updated_at": "2017-02-26T03:46:59.412Z"
+}, {
+  "id": 5,
+  "floor": 1,
+  "name": "105",
+  "occupied": true,
+  "smoking": true,
+  "pets": false,
+  "beds": 2,
+  "max_occupancy": 5,
+  "created_at": "2017-02-26T03:46:59.416Z",
+  "updated_at": "2017-02-26T03:46:59.416Z"
+}, {
+  "id": 6,
+  "floor": 1,
+  "name": "106",
+  "occupied": false,
+  "smoking": false,
+  "pets": true,
+  "beds": 3,
+  "max_occupancy": 7,
+  "created_at": "2017-02-26T03:46:59.421Z",
+  "updated_at": "2017-02-26T03:46:59.421Z"
+}, {
+  "id": 7,
+  "floor": 1,
+  "name": "107",
+  "occupied": false,
+  "smoking": true,
+  "pets": false,
+  "beds": 1,
+  "max_occupancy": 3,
+  "created_at": "2017-02-26T03:46:59.425Z",
+  "updated_at": "2017-02-26T03:46:59.425Z"
+}, {
+  "id": 8,
+  "floor": 1,
+  "name": "108",
+  "occupied": false,
+  "smoking": true,
+  "pets": false,
+  "beds": 2,
+  "max_occupancy": 5,
+  "created_at": "2017-02-26T03:46:59.427Z",
+  "updated_at": "2017-02-26T03:46:59.427Z"
+}, {
+  "id": 9,
+  "floor": 1,
+  "name": "109",
+  "occupied": false,
+  "smoking": false,
+  "pets": false,
+  "beds": 1,
+  "max_occupancy": 3,
+  "created_at": "2017-02-26T03:46:59.430Z",
+  "updated_at": "2017-02-26T03:46:59.430Z"
+}, {
+  "id": 10,
+  "floor": 2,
+  "name": "201",
+  "occupied": true,
+  "smoking": true,
+  "pets": false,
+  "beds": 1,
+  "max_occupancy": 3,
+  "created_at": "2017-02-26T03:46:59.433Z",
+  "updated_at": "2017-02-26T03:46:59.433Z"
+}, {
+  "id": 11,
+  "floor": 2,
+  "name": "202",
+  "occupied": true,
+  "smoking": false,
+  "pets": false,
+  "beds": 2,
+  "max_occupancy": 5,
+  "created_at": "2017-02-26T03:46:59.436Z",
+  "updated_at": "2017-02-26T03:46:59.436Z"
+}, {
+  "id": 12,
+  "floor": 2,
+  "name": "203",
+  "occupied": false,
+  "smoking": true,
+  "pets": true,
+  "beds": 2,
+  "max_occupancy": 5,
+  "created_at": "2017-02-26T03:46:59.438Z",
+  "updated_at": "2017-02-26T03:46:59.438Z"
+}]
