@@ -1,37 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import {
-  adjust,
-  assoc,
-  findIndex,
-  map,
-  propEq,
+  applySpec,
+  path,
 } from 'ramda'
+import { connect } from 'react-redux'
 import rooms from './RoomCardList.json'
 import RoomCard from '../RoomCard'
 import styles from './RoomCardList.css'
+import * as RoomActions from '../../actions/rooms'
 
-class RoomCardList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      rooms: map(assoc('expanded', false), rooms),
-    }
+export class RoomCardList extends Component {
+
+  componentDidMount() {
+    this.props.setRooms({ rooms })
   }
   handleExpandChange(id) {
     return (expanded) => {
-      const index = findIndex(propEq('id', id), this.state.rooms)
-      this.setState({ rooms: adjust(assoc('expanded', expanded), index, this.state.rooms) })
+      this.props.expandCard({ id, expanded })
     }
   }
   handleSetOccupied(id) {
     return (event, occupied) => {
-      console.log('this,id, occupied', this, id, occupied)
+      this.props.setOccupied({ id, occupied })
     }
   }
 
 
   renderRooms() {
-    return this.state.rooms.map((room) => (
+    return this.props.rooms.map((room) => (
       <RoomCard
         className={styles.card}
         key={room.id}
@@ -50,5 +46,18 @@ class RoomCardList extends Component {
     )
   }
 }
-
-export default RoomCardList
+RoomCardList.propTypes = {
+  expandCard: PropTypes.func.isRequired,
+  setOccupied: PropTypes.func.isRequired,
+  setRooms: PropTypes.func.isRequired,
+  rooms: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.number.isRequired }).isRequired,
+  ).isRequired,
+}
+const mapStateToProps = applySpec({
+  rooms: path(['rooms', 'rooms']),
+})
+const mapDispatchToProps = {
+  ...RoomActions,
+}
+export default connect(mapStateToProps, mapDispatchToProps)(RoomCardList)
